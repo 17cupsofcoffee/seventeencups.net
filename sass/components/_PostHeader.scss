@@ -1,0 +1,21 @@
+.PostHeader {
+    max-width: $max-width;
+    margin: 0 auto;
+
+    &__title {
+        margin-bottom: 8px;
+
+        a {
+            color: $base-color;
+        }
+    }
+
+    &__info {
+        text-transform: uppercase;
+        font-family: $header-font;
+    }
+
+    &__timestamp {
+        color: $base-color;
+    }
+}

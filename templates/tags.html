@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Tags - {{ config.title }}
+{% endblock title %}
+
+{% block content %}
+    {% for tag in tags %}
+        <header class="PostHeader">
+            <h1 class="PostHeader__title"><a href="/tags/{{ tag.slug }}">{{ tag.name }}</a></h1>
+            <p class="PostHeader__info">
+                {{ tag.pages | length }} post{{ tag.pages | length | pluralize }}
+            </p>
+        </header>
+    {% endfor %}
+{% endblock content %}

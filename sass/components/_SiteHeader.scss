@@ -1,0 +1,49 @@
+.SiteHeader {
+    background-color: $primary-color;
+    text-align: center;
+    padding: 32px 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
+
+    &__logo {
+        width: 100%;
+        max-width: 256px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    h1 {
+        color: #FFFFFF;
+        margin-bottom: 0px;
+    }
+
+    a {
+        color: white;
+    }
+
+    &__bio {
+        //font-family: $header-font;
+        font-size: $base-size - 2px;
+        color: #FFFFFF;
+        margin-bottom: 40px;
+    }
+
+    &__nav {
+        font-family: $header-font;
+        font-size: $base-size + 2px;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+
+    @media (min-width: 960px) {
+        position: fixed;
+        width: $sidebar-width;
+        height: 100%;
+        padding: 0;
+        top: 0;
+
+        &__logo {
+            border-radius: 0;
+        }
+    }
+}

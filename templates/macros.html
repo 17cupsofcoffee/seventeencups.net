@@ -1,0 +1,24 @@
+{% macro post_header(page) %}
+    <header class="PostHeader">
+        <h1 class="PostHeader__title">
+            <a href="{{ page.permalink }}">
+                {{ page.title }}
+            </a>
+        </h1>
+        <p class="PostHeader__info">
+            {% if page.date %}
+                <a class="PostHeader__timestamp" href="{{ page.permalink }}">
+                    <time datetime="{{ page.date }}">
+                        {{ page.date | date(format="%B %e, %Y") }}
+                    </time>
+                </a>
+            {% endif %}
+            {% if page.tags %}
+                {% for tag in page.tags %}
+                    &bull;
+                    <a href="{{ get_url(path="tags") }}{{ tag | slugify }}">{{ tag }}</a>
+                {% endfor %}
+            {% endif %}
+        </p>
+    </header>
+{% endmacro post_header %}

@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block title %}
+    {{ tag.name }} - {{ config.title }}
+{% endblock title %}
+
+{% block content %}
+    {% for page in tag.pages %}
+        {{ macros::post_header(page=page) }}
+    {% endfor %}
+{% endblock content %}

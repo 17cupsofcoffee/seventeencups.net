@@ -1,0 +1,79 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <meta name="theme-color" content="#673AB7">
+
+    {% if config.generate_rss %}
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}">
+    {% endif %}
+</head>
+
+<body>
+    <header class="SiteHeader">
+        <a href="{{ get_url(path="/") }}">
+            <img class="SiteHeader__logo" src="{{ get_url(path="logo.jpg") }}" alt="{{ config.title }}" height="180">
+            <h1>{{ config.title }}</h1>
+        </a>
+
+        <p class="SiteHeader__bio">
+            dev, musician, coffee disposal unit
+            <br>
+            <img src="{{ get_url(path="pride.png") }}" alt="genderqueer flag" width="14" height="9" style="image-rendering: pixelated">
+            &nbsp;they/them&nbsp;
+            <img src="{{ get_url(path="pride.png") }}" alt="genderqueer flag" width="14" height="9" style="image-rendering: pixelated">
+        </p>
+
+        <ul class="SiteHeader__nav">
+            <li><a href="{{ get_url(path="/") }}">Home</a></li>
+            <li><a href="{{ get_url(path="projects") }}">Projects</a></li>
+            <li><a href="{{ get_url(path="tags") }}">Tags</a></li>
+        </ul>
+
+        <div class="SiteHeader__social">
+            <a href="https://twitter.com/17cupsofcoffee" aria-label="Twitter">
+                <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/17cupsofcoffee" aria-label="GitHub">
+                <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/joe-clay-588434a6" aria-label="LinkedIn">
+                <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:joe@seventeencups.com" aria-label="Email">
+                <i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="{{ get_url(path="rss.xml") }}" aria-label="RSS Feed">
+                <i class="fa fa-rss-square fa-2x" aria-hidden="true"></i>
+            </a>
+        </div>
+    </header>
+
+    <main class="SiteContent">
+        {% block content %}
+            {% set posts = get_section(path="posts/_index.md") %}
+            
+            {% for page in posts.pages %}
+                {{ macros::post_header(page=page) }}
+            {% endfor %}
+        {% endblock content %}
+
+        <footer class="SiteFooter">
+            © 2017 <a href="{{ get_url(path="/") }}">Joe Clay</a>. Powered by <a href="https://github.com/Keats/gutenberg">Gutenberg</a>.
+            <br> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        </footer>
+    </main>
+</body>
+
+</html>
