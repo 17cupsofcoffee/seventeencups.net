@@ -12,7 +12,7 @@ Along the long and slightly convoluted path I took to finding my current career 
 
 So when I stumbled across the [`vst2` Rust crate](https://github.com/overdrivenpotato/rust-vst2/) (created by the delightfully named 'overdrivenpotato'), I couldn't resist taking some time out of my Saturday to check it out.
 
-![There's always a relevant XKCD.](https://imgs.xkcd.com/comics/nerd_sniping.png)
+![There's always a relevant XKCD.](./nerd_sniping.png)
 
 I'm no audio programming wizard, so I'm going to start really simple by throwing together a bare-bones digital distortion effect, based on the algorithm from [this tutorial by Martin Finke](http://www.martin-finke.de/blog/articles/audio-plugins-005-digital-distortion/). 
 
@@ -87,7 +87,7 @@ plugin_main!(DigiDist);
 
 Believe it or not, that's all that's required to create our bare minimum VST! Run `cargo build`, and then copy `target/debug/digidist.dll` into your host's plugins folder. All being well, you should be able to load it onto a track:
 
-![Our empty plugin running in Ableton](https://puu.sh/uXUga/5d9bc42f1e.png)
+![Our empty plugin running in Ableton](./ui1.png)
 
 # Audio Mangling
 
@@ -228,9 +228,9 @@ fn process(&mut self, buffer: AudioBuffer<f32>) {
 
 That's it, we're done! Compile your code, install the DLL into your host, and let's see how it looks and sounds. Turn down your volume - Soundcloud's embeds are always way too loud!
 
-![Look, parameters!](https://puu.sh/uY1Za/7797bbcfcb.png)
+![Look, parameters!](./ui2.png)
 
-<p><iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/314423898%3Fsecret_token%3Ds-C1L7o&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></p>
+<p><iframe title="Example Audio" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/314423898%3Fsecret_token%3Ds-C1L7o&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></p>
 
 Hm. I'm not exactly Aphex Twin, am I? But it's a start!
 
