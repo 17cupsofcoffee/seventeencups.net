@@ -1,6 +1,6 @@
 +++
 title = "Projects"
-url = "/projects"
+path = "/projects"
 +++
 
 ## Code
