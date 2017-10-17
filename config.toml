@@ -4,3 +4,10 @@ compile_sass = true
 highlight_code = true
 generate_tags_pages = true
 generate_rss = true
+
+[extra]
+description = """
+Joe Clay's personal website, blog and portfolio. \
+Features articles/tutorials about the Rust programming language. \
+Writing meta tags in the third person feels weird." \
+"""
