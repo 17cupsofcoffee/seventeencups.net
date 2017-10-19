@@ -13,12 +13,12 @@
     <meta name="twitter:creator" content="@17cupsofcoffee" />
 
     {% block meta %}
-        <meta name="description" content="{{ config.extra.description }}">
+        <meta name="description" content="{{ config.description }}">
         <meta property="og:title" content="{{ config.title }}">
         <meta property="og:type" content="website">
         <meta property="og:image" content="{{ get_url(path="logo.jpg") }}">
         <meta property="og:url" content="{{ get_url(path="/") }}">
-        <meta property="og:description" content="{{ config.extra.description }}">
+        <meta property="og:description" content="{{ config.description }}">
         <meta property="og:site_name" content="{{ config.title }}">
     {% endblock meta %}
 
