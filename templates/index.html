@@ -26,7 +26,8 @@
         <title>{{ config.title }}</title>
     {% endblock title %}
 
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="{{ get_url(path="main.css") }}">
+    <link rel="icon" href="{{ get_url(path="favicon.ico") }}">
     <script async src="https://use.fontawesome.com/d04ca2ddc3.js"></script>
 
     <meta name="theme-color" content="#673AB7">
