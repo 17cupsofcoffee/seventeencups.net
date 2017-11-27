@@ -34,6 +34,17 @@
         margin-bottom: 40px;
     }
 
+    &__social a {
+        display: inline-block;
+
+        .icon {
+            stroke-width: 0;
+            stroke: currentColor;
+            fill: currentColor;
+            margin: 0 2px;
+        }
+    }
+
     @media (min-width: 960px) {
         position: fixed;
         width: $sidebar-width;
