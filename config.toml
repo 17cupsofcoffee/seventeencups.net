@@ -1,8 +1,7 @@
 title = "Joe Clay"
 description = """
 Joe Clay's personal website, blog and portfolio. \
-Features articles/tutorials about the Rust programming language. \
-Writing meta tags in the third person feels weird. \
+Features articles/tutorials about programming and music. \
 """
 base_url = "https://www.seventeencups.net"
 compile_sass = true
