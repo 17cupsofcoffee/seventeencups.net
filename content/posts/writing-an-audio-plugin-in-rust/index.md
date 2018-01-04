@@ -3,9 +3,6 @@ title = "Writing an Audio Plugin in Rust"
 date = "2017-03-25"
 tags = ["rust", "music"]
 aliases = ["/writing-an-audio-plugin-in-rust"]
-
-[extra]
-github = "https://github.com/17cupsofcoffee/digidist"
 +++
 
 Along the long and slightly convoluted path I took to finding my current career as a software developer, I ended up spending a year at college studying music. It didn't really amount to much in the way of gainful employment, but [it's still something I'm really passionate about](https://soundcloud.com/17cupsofcoffee), and I'd really like to find more ways of combining it with my love of programming.
@@ -14,7 +11,7 @@ So when I stumbled across the [`vst2` Rust crate](https://github.com/overdrivenp
 
 ![There's always a relevant XKCD.](nerd_sniping.png)
 
-I'm no audio programming wizard, so I'm going to start really simple by throwing together a bare-bones digital distortion effect, based on the algorithm from [this tutorial by Martin Finke](http://www.martin-finke.de/blog/articles/audio-plugins-005-digital-distortion/). 
+I'm no audio programming wizard, so I'm going to start really simple by throwing together a bare-bones digital distortion effect, based on the algorithm from [this tutorial by Martin Finke](http://www.martin-finke.de/blog/articles/audio-plugins-005-digital-distortion/). You can find the final source code on GitHub [here](https://github.com/17cupsofcoffee/digidist).
 
 # Prerequisites
 To follow along with this tutorial, you'll need:

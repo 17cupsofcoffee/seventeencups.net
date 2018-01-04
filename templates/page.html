@@ -27,19 +27,7 @@
     {{ macros::post_header(page=page) }}
 
     <main>
-        {% if page.extra.github %}
-        <p>
-            <a href="{{ page.extra.github }}"><small><i class="fa fa-github" aria-hidden="true"></i> The code from this article is available on GitHub.</small></a>
-        </p>
-        {% endif %}
-
         {{ page.content | safe }}
-
-        {% if page.extra.github %}
-        <p>
-            <a href="{{ page.extra.github }}"><small><i class="fa fa-github" aria-hidden="true"></i> The code from this article is available on GitHub.</small></a>
-        </p>
-        {% endif %}
 
         {% if page.date %}
             <div id="disqus_thread"></div>
