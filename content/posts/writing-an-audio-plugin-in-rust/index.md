@@ -5,6 +5,8 @@ tags = ["rust", "music"]
 aliases = ["/writing-an-audio-plugin-in-rust"]
 +++
 
+> **Update:** [doomy](http://vaporsoft.net/) has written [an excellent follow-up article](http://vaporsoft.net/creating-an-audio-plugin-with-rust-vst/) to this one, showing off a [more actively maintained fork of the vst2 crate](https://crates.io/crates/vst), as well as some more advanced stuff like MIDI events. I highly recommend checking it out! All the below code should work with the new crate with little/no changes.
+
 Along the long and slightly convoluted path I took to finding my current career as a software developer, I ended up spending a year at college studying music. It didn't really amount to much in the way of gainful employment, but [it's still something I'm really passionate about](https://soundcloud.com/17cupsofcoffee), and I'd really like to find more ways of combining it with my love of programming.
 
 So when I stumbled across the [`vst2` Rust crate](https://github.com/overdrivenpotato/rust-vst2/) (created by the delightfully named 'overdrivenpotato'), I couldn't resist taking some time out of my Saturday to check it out.
