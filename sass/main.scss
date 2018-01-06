@@ -48,6 +48,11 @@ blockquote p {
 @media (min-width: 960px) {
     .SiteContent {
         margin-left: $sidebar-width;
+    }
+}
+
+@media (min-width: 1280px) {
+    .SiteContent {
         padding: 96px 32px;
     }
 }
