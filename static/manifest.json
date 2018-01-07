@@ -1,8 +1,8 @@
 {
     "name": "Joe Clay",
     "short_name": "Joe Clay",
-    "background_color": "#673AB7",
-    "theme_color": "#673AB7",
+    "background_color": "#8e44ad",
+    "theme_color": "#8e44ad",
     "display": "standalone",
     "start_url": "/?utm_source=homescreen",
     "icons": [
