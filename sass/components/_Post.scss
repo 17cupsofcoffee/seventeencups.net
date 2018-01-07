@@ -1,14 +1,9 @@
 .Post {
-    max-width: $max-width;
-    margin: 0 auto;
-
     pre, iframe, img {
         display: block;
         margin: 32px auto;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         padding: 16px;
         background-color: #EEEEEE;
-        max-width: 100%;
     }
 
     pre {

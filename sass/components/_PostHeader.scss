@@ -1,8 +1,6 @@
 .PostHeader {
-    max-width: $max-width;
-    margin: 0 auto;
-
     &__title {
+        margin-top: 0;
         margin-bottom: 8px;
 
         a {
@@ -11,6 +9,7 @@
     }
 
     &__info {
+        margin-top: 0;
         text-transform: uppercase;
         font-family: $header-font;
     }

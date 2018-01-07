@@ -1,6 +1,7 @@
-$primary-color: #673ab7;
-$max-width: 960px;
-$sidebar-width: 256px;
+$primary-color: #8e44ad;
+$secondary-color: #c39bd3;
+$sidebar-width: 320px;
+$max-width: 960px + $sidebar-width;
 
 /*
  * Typography
