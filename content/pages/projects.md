@@ -6,13 +6,18 @@ path = "/projects"
 ## Code
 All my code is hosted on [GitHub](https://github.com/17cupsofcoffee) - you can find an up-to-date listing of the projects I'm working on there. Here's a few of them:
 
+### Tetra
+<small>[GitHub](https://github.com/17cupsofcoffee/Tetra)</small>
+
+A 2D game development framework for C# and MonoGame, with a heavy focus on ease-of-use and solid documentation.
+
 ### Ein
-[<small><i class="fa fa-github" aria-hidden="true"></i> GitHub</small>](https://github.com/17cupsofcoffee/ein)
+<small>[GitHub](https://github.com/17cupsofcoffee/ein)</small>
 
 A Lua-inspired programming language, which I wrote in order to teach myself more about compilers and parsers - very heavily work in progress!
 
 ### Still Hungry
-[<small><i class="fa fa-globe" aria-hidden="true"></i> Website</small>](https://stillhungry.seventeencups.net/) | [<small><i class="fa fa-github" aria-hidden="true"></i> GitHub</small>](https://github.com/17cupsofcoffee/Still-Hungry)
+<small>[Website](https://stillhungry.seventeencups.net/) | [GitHub](https://github.com/17cupsofcoffee/Still-Hungry)</small>
 
 A Minecraft mod that adds new foods and cooking mechanics. Features art by [DizzyAlyx](https://dizzyalyx.deviantart.com). Currently unmaintained, but kept online for posterity (it was the first programming project I ever released)!  
 
