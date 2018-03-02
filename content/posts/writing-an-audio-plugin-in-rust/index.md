@@ -1,6 +1,6 @@
 +++
 title = "Writing an Audio Plugin in Rust"
-date = "2017-03-25"
+date = 2017-03-25
 tags = ["rust", "music"]
 aliases = ["/writing-an-audio-plugin-in-rust"]
 +++

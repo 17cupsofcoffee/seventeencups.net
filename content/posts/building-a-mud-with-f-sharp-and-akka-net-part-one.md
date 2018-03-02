@@ -1,6 +1,6 @@
 +++
 title = "Building a MUD with F# and Akka.NET - Part One"
-date = "2017-03-12"
+date = 2017-03-12
 tags = ["fsharp", "akka.net"]
 aliases = ["/building-a-mud-with-f-sharp-and-akka-net-part-one"]
 +++

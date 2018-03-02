@@ -1,6 +1,6 @@
 +++
 title = "Finally Up And Running"
-date = "2017-03-11"
+date = 2017-03-11
 tags = ["website"]
 aliases = ["/finally-up-and-running"]
 +++

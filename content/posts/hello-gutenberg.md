@@ -1,6 +1,6 @@
 +++
 title = "Hello, Gutenberg!"
-date = "2017-10-01"
+date = 2017-10-01
 tags = ["rust", "website"]
 +++
 
