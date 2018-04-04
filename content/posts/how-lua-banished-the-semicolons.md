@@ -62,8 +62,8 @@ isActive && doSomething();
 The equivalent in Lua isn't valid unless you [assign the result to a temporary variable:](http://lua-users.org/wiki/ExpressionsAsStatements)
 
 ```lua
-local _ = isActive and doSomething() -- _ is a special name that tells Lua 
-                                     -- not to bind the result to anything
+local _ = isActive and doSomething() -- _ has no special meaning - just a common Lua 
+                                     -- naming convention for throwing away variables!
 ```
 
 That said, once I started thinking about it, I realized I don't write code like that all too often! I've gone through my phase of writing [ternary](https://en.wikipedia.org/wiki/%3F:) soup, and I think I tend to prefer using more explicit/blocky syntax these days - it tends to convey my intent better. I'm starting to wonder if dropping expressions-as-statements might not be too bad a price to pay for having a completely unambiguous, semicolon-less grammar!
