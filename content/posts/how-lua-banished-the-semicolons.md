@@ -4,7 +4,7 @@ date = 2018-04-03
 tags = ["language design", "ein", "lua"]
 +++
 
-My current pet project outside of work is developing a little programming language called [Ein](https://github.com/17cupsofcoffee/ein). I decided fairly early on in development that I didn't want Ein to have semicolons, both as a matter of taste and as a bit of a development challenge to myself, so I've spent a fair chunk of the past week investigating how other languages make this work.
+My current pet project outside of work is developing a little programming language called [Ein](https://github.com/17cupsofcoffee/ein). I decided fairly early on in development that I didn't want Ein to have semicolons, so I've spent a fair chunk of the past week investigating how other languages make this work.
 
 Lua's solution to this problem is (in my opinion) fairly nifty, so I thought I'd write about it on the off-chance that someone else will find it as interesting as I do 😄
 
@@ -23,9 +23,9 @@ How does our language's parser decide whether this should be `let x = 1; -1;` or
 
 ## The (Potential) Solutions
 
-There's several ways that languages try to get around this problem. Most understandably throw their hands up and say, "Nope, not dealing with that, let's keep the semicolons". Some make the whitespace in their language significant, like Python. Others, like Go, helpfully insert the semicolons for you behind the scenes based on [a set of rules](https://golang.org/ref/spec#Semicolons).
+There's several ways that languages try to get around this problem.  Some make the whitespace in their language significant, like Python. Others, like Go, helpfully insert the semicolons for you behind the scenes based on [a set of rules](https://golang.org/ref/spec#Semicolons).
 
-Personally though, I'm not a fan of those solutions. Explicit semicolons are ugly to my eye, making whitespace have meaning rubs me the wrong way for reasons I don't quite understand, and automatic semicolon insertion feels like placing too much trust in the compiler to 'guess' where I meant for the statements to end.
+Personally though, I'm not a fan of those solutions. Making whitespace have meaning rubs me the wrong way for reasons I don't quite understand, and automatic semicolon insertion feels like placing too much trust in the compiler to 'guess' where I meant for the statements to end.
 
 Surely there's a way we can make things explicit without peppering our code with extra syntax?
 
