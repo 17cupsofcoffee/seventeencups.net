@@ -1,9 +1,11 @@
 .Post {
-    pre, iframe, img {
+    pre,
+    iframe,
+    img {
         display: block;
         margin: 32px auto;
         padding: 16px;
-        background-color: #EEEEEE;
+        background-color: #eeeeee;
         max-width: 100%;
     }
 
