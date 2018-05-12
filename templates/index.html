@@ -7,19 +7,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    
+    <meta name="description" content="{{ config.description }}">
+    <meta property="og:image" content="{{ get_url(path="logo.jpg") }}">
+    <meta property="og:site_name" content="{{ config.title }}">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@17cupsofcoffee" />
     <meta name="twitter:creator" content="@17cupsofcoffee" />
+    <meta name="theme-color" content="#8e44ad">
 
     {% block meta %}
-        <meta name="description" content="{{ config.description }}">
-        <meta property="og:title" content="{{ config.title }}">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="{{ get_url(path="logo.jpg") }}">
-        <meta property="og:url" content="{{ get_url(path="/") }}">
-        <meta property="og:description" content="{{ config.description }}">
-        <meta property="og:site_name" content="{{ config.title }}">
     {% endblock meta %}
 
     {% block title %}
@@ -27,16 +24,10 @@
     {% endblock title %}
 
     <link rel="stylesheet" href="{{ get_url(path="main.css") }}">
-    
     <link rel="icon" type="image/png" sizes="192x192" href="{{ get_url(path="favicon-192x192.png") }}">
     <link rel="icon" type="image/png" sizes="128x128" href="{{ get_url(path="favicon-128x128.png") }}">
-
-    <meta name="theme-color" content="#8e44ad">
     <link rel="manifest" href="{{ get_url(path="manifest.json") }}">    
-
-    {% if config.generate_rss %}
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}">
-    {% endif %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}">
 </head>
 
 <body>
