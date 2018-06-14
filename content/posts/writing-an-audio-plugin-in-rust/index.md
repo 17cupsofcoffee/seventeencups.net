@@ -3,9 +3,12 @@ title = "Writing an Audio Plugin in Rust"
 date = 2017-03-25
 tags = ["rust", "music"]
 aliases = ["/writing-an-audio-plugin-in-rust"]
-+++
 
-> **Update:** [doomy](http://vaporsoft.net/) has written [an excellent follow-up article](http://vaporsoft.net/creating-an-audio-plugin-with-rust-vst/) to this one, showing off a [more actively maintained fork of the vst2 crate](https://crates.io/crates/vst), as well as some more advanced stuff like MIDI events. I highly recommend checking it out! All the below code should work with the new crate with little/no changes.
+[extra]
+note = """
+[doomy](http://vaporsoft.net/) has written [an excellent follow-up article](http://vaporsoft.net/creating-an-audio-plugin-with-rust-vst/) to this one, showing off a [more actively maintained fork of the vst2 crate](https://crates.io/crates/vst), as well as some more advanced stuff like MIDI events. I highly recommend checking it out! All the below code should work with the new crate with little/no changes.
+"""
++++
 
 Along the long and slightly convoluted path I took to finding my current career as a software developer, I ended up spending a year at college studying music. It didn't really amount to much in the way of gainful employment, but [it's still something I'm really passionate about](https://soundcloud.com/17cupsofcoffee), and I'd really like to find more ways of combining it with my love of programming.
 
@@ -15,7 +18,7 @@ So when I stumbled across the [`vst2` Rust crate](https://github.com/overdrivenp
 
 I'm no audio programming wizard, so I'm going to start really simple by throwing together a bare-bones digital distortion effect, based on the algorithm from [this tutorial by Martin Finke](http://www.martin-finke.de/blog/articles/audio-plugins-005-digital-distortion/). You can find the final source code on GitHub [here](https://github.com/17cupsofcoffee/digidist).
 
-# Prerequisites
+## Prerequisites
 To follow along with this tutorial, you'll need:
 
 * The latest stable version of [Rust](https://www.rust-lang.org/en-US/) - 1.16.0, at the time of writing.
@@ -23,7 +26,7 @@ To follow along with this tutorial, you'll need:
 
 It's worth noting that I'm running the 64-bit version of Ableton on Windows - if you're using a 32-bit plugin host, you'll need to compile your plugin with the 32-bit Rust toolchain. If you're on Mac, you can use [zywicki's handy shell script](https://github.com/overdrivenpotato/rust-vst2/blob/master/osx_vst_bundler.sh) to package the library in a format that will work for you.
 
-# The Bare Minimum
+## The Bare Minimum
 
 Let's start as simple as possible, by getting a completely empty VST plugin loading into our host. All it'll do is pass through audio unaltered - not very exciting, but it'll prove our code works.
 
@@ -88,9 +91,13 @@ Believe it or not, that's all that's required to create our bare minimum VST! Ru
 
 ![Our empty plugin running in Ableton](ui1.png)
 
-# Audio Mangling
+## Audio Mangling
 
->Before we start writing our actual audio processing code, a quick warning - **make sure that you turn down your volume, and place a limiter on your host's audio output when developing VSTs!** Your ears will thank you the first time you run into a bug.
+<div class="post-body__note">
+    <p class="post-body__note__text">
+        Before we start writing our actual audio processing code, a quick warning - make sure that you turn down your volume, and place a limiter on your host's audio output when developing VSTs! Your ears will thank you the first time you run into a bug.
+    </p>
+</div>
 
 Our digital distortion plugin is going to have:
 
@@ -233,7 +240,7 @@ That's it, we're done! Compile your code, install the DLL into your host, and le
 
 Hm. I'm not exactly Aphex Twin, am I? But it's a start!
 
-# Wrapping Up
+## Wrapping Up
 
 Hopefully you found this quick tour of the `vst2` crate as fun as I did - I'm floored by how quickly I was able to go from "hey, this sounds like it'd be a cool idea" to having a working plugin!
 
