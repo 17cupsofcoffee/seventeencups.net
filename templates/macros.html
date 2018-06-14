@@ -1,13 +1,13 @@
-{% macro post_header(page) %}
-    <header class="PostHeader">
-        <h1 class="PostHeader__title">
+{% macro post_header(page, excerpt=false) %}
+    <header class="post-header">
+        <h1 class="post-header__title">
             <a href="{{ page.permalink }}">
                 {{ page.title }}
             </a>
         </h1>
-        <p class="PostHeader__info">
+        <p class="post-header__info">
             {% if page.date %}
-                <a class="PostHeader__timestamp" href="{{ page.permalink }}">
+                <a class="post-header__timestamp" href="{{ page.permalink }}">
                     <time datetime="{{ page.date }}">
                         {{ page.date | date(format="%B %e, %Y") }}
                     </time>
@@ -20,5 +20,11 @@
                 {% endfor %}
             {% endif %}
         </p>
+        {% if excerpt %}
+            <p class="post-header__excerpt">
+                {{ page.content | safe | striptags | truncate }}
+                <a href="{{ page.permalink }}">more</a>
+            </p>
+        {% endif %}
     </header>
 {% endmacro post_header %}

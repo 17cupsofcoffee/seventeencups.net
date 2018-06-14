@@ -1,17 +1,16 @@
 $primary-color: #8e44ad;
 $secondary-color: #c39bd3;
-$sidebar-width: 320px;
-$max-width: 960px + $sidebar-width;
 
-/*
- * Typography
- */
-
-$base-size: 15px;
-$base-line-height: 1.6;
+$base-size: 16px;
+$base-line-height: 1.7;
 $base-font: "Georgia", serif;
 $base-color: #3a4145;
 
-$header-line-height: 1.1;
+$header-line-height: 1.2;
 $header-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+$sidebar-width: 360px;
+$content-width: 1024px;
+$breakpoint-tablet: $content-width;
+$breakpoint-screen: $content-width + $sidebar-width;

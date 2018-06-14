@@ -2,19 +2,14 @@
 
 @import "variables";
 
-@import "components/SiteHeader";
-@import "components/SiteFooter";
-@import "components/Post";
-@import "components/PostHeader";
-
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
 
+html,
 body {
-    background-color: $secondary-color;
     color: $base-color;
     font-family: $base-font;
     font-size: $base-size;
@@ -42,33 +37,169 @@ a {
     text-decoration: none;
 }
 
-blockquote p {
-    border-left: 4px solid #eeeeee;
-    padding: 8px 16px;
-    margin: 24px 0;
-    font-size: $base-size - 2px;
-}
-
-.SiteContainer {
-    max-width: $max-width;
+.site-header {
+    font-family: $header-font;
+    text-align: center;
     margin: 0 auto;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-.SiteContent {
-    background-color: white;
     padding: 32px;
+    color: #ffffff;
+    background-color: $primary-color;
+
+    a {
+        color: #ffffff;
+    }
+
+    &__logo img {
+        border-radius: 50%;
+        border: 4px solid $secondary-color;
+    }
+
+    &__title {
+        margin: 32px 0 4px;
+    }
+
+    &__bio {
+        margin: 0;
+
+        img {
+            image-rendering: pixelated;
+            border: 1px solid $secondary-color;
+        }
+    }
+
+    &__nav,
+    &__social {
+        font-size: 1.25em;
+        margin: 32px 0 0 0;
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            padding: 0 8px;
+        }
+    }
+
+    &__social {
+        font-size: 2em;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        width: $sidebar-width;
+        height: 100%;
+        position: fixed;
+
+        &__logo {
+            margin: 0 auto;
+        }
+
+        &__nav li {
+            display: block;
+        }
+    }
 }
 
-@media (min-width: $max-width) {
-    .SiteContainer {
-        margin: 64px auto;
-        display: flex;
-        flex-direction: row-reverse;
+.site-content {
+    padding: 32px;
+    margin: 0 auto;
+    max-width: $content-width;
+
+    @media (min-width: $breakpoint-tablet) {
+        margin: 0;
+        margin-left: $sidebar-width;
     }
 
-    .SiteContent {
-        flex: 1;
-        min-width: 0;
+    @media (min-width: $breakpoint-screen) {
+        padding: 64px;
     }
+}
+
+.site-footer {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.post-header {
+    &__title {
+        margin-top: 0;
+        margin-bottom: 8px;
+
+        a {
+            color: $base-color;
+        }
+    }
+
+    &__info {
+        margin-top: 0;
+        text-transform: uppercase;
+        font-family: $header-font;
+    }
+
+    &__excerpt {
+        margin-top: 0;
+        padding-bottom: 24px;
+    }
+
+    &__timestamp {
+        color: $base-color;
+    }
+}
+
+.post-body {
+    &__note,
+    pre,
+    iframe,
+    img {
+        display: block;
+        margin: 32px auto;
+        padding: 32px;
+        background-color: #eeeeee;
+        max-width: 100%;
+    }
+
+    pre {
+        overflow: auto;
+    }
+
+    &__note {
+        &__title {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        &__text {
+            margin: 0;
+        }
+    }
+
+    #disqus_thread iframe {
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.icon-stackoverflow {
+    width: 0.857421875em;
+}
+
+.icon-twitter {
+    width: 0.9287109375em;
+}
+
+.icon-github {
+    width: 0.857421875em;
+}
+
+.icon-rss {
+    width: 0.7861328125em;
 }

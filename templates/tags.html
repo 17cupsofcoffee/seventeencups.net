@@ -1,15 +1,10 @@
-{% extends "base.html" %}
-
-{% block title %}
-    <title>Tags - {{ config.title }}</title>
-    <meta property="og:title" content="Tags - {{ config.title }}">
-{% endblock title %}
+{% extends "index.html" %}
 
 {% block content %}
     {% for tag in tags %}
-        <header class="PostHeader">
-            <h1 class="PostHeader__title"><a href="/tags/{{ tag.slug }}">{{ tag.name }}</a></h1>
-            <p class="PostHeader__info">
+        <header class="post-header">
+            <h1 class="post-header__title"><a href="/tags/{{ tag.slug }}">{{ tag.name }}</a></h1>
+            <p class="post-header__info">
                 {{ tag.pages | length }} post{{ tag.pages | length | pluralize }}
             </p>
         </header>

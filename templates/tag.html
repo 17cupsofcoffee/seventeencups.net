@@ -1,12 +1,7 @@
-{% extends "base.html" %}
-
-{% block title %}
-    <title>{{ tag.name }} - {{ config.title }}</title>
-    <meta property="og:title" content="{{ tag.name }} - {{ config.title }}">
-{% endblock title %}
+{% extends "index.html" %}
 
 {% block content %}
     {% for page in tag.pages %}
-        {{ macros::post_header(page=page) }}
+        {{ macros::post_header(page=page, excerpt=true) }}
     {% endfor %}
 {% endblock content %}

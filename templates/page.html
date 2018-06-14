@@ -1,24 +1,18 @@
-{% extends "base.html" %}
+{% extends "index.html" %}
 {% import "macros.html" as macros %}
 
-{% block title %}
-    <title>{{ page.title }} - {{ config.title }}</title>
-    <meta property="og:title" content="{{ page.title }} - {{ config.title }}">
-{% endblock head %}
-
-{% block meta %}
-    {% if page.date %}
-        <meta property="og:type" content="article">
-        <meta property="article:published_time" content="{{ page.date }}">
-        <meta property="article:author" content="{{ get_url(path="/") }}">
-    {% endif %}
-{% endblock meta %}
-
 {% block content %}
-    <article class="Post">
+    <article class="post-body">
         {{ macros::post_header(page=page) }}
 
         <main>
+            {% if page.extra.note %}
+                <aside class="post-body__note">
+                    <h3 class="post-body__note__title">Hey, listen!</h3>
+                    <p class="post-body__note__text">{{ page.extra.note | markdown(inline=true) }}</p>
+                </aside>
+            {% endif %}
+
             {{ page.content | safe }}
 
             {% if page.date %}
