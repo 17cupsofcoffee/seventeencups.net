@@ -67,6 +67,14 @@ a {
         }
     }
 
+    &__pronouns::before, &__pronouns::after {
+        content: " ";
+        display: inline-block;
+        width: 14px;
+        height: 9px;
+        background-image: url("/pride.png")
+    }
+
     &__nav,
     &__social {
         font-size: 1.25em;
