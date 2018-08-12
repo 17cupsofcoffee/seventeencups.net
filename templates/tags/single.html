@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {% block content %}
-    {% for page in tag.pages %}
+    {% for page in term.pages %}
         {{ macros::post_header(page=page, excerpt=true) }}
     {% endfor %}
 {% endblock content %}

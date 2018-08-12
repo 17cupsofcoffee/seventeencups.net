@@ -1,6 +1,8 @@
 +++
 title = "Hello, Gutenberg!"
 date = 2017-10-01
+
+[taxonomies]
 tags = ["rust", "website"]
 +++
 

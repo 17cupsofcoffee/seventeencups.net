@@ -1,8 +1,10 @@
 +++
 title = "Building a MUD with F# and Akka.NET - Part One"
 date = 2017-03-12
-tags = ["fsharp", "akka.net"]
 aliases = ["/building-a-mud-with-f-sharp-and-akka-net-part-one"]
+
+[taxonomies]
+tags = ["fsharp", "akka.net"]
 +++
 
 I feel like no matter how many languages I try, [I always keep getting drawn back to F#](https://www.youtube.com/watch?v=UPw-3e_pzqU). It's got just about everything I love about functional languages like Elm, Haskell and OCaml, while still giving me access to the mountain of great open source libraries that are available in the .NET ecosystem.

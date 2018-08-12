@@ -1,8 +1,10 @@
 +++
 title = "Finally Up And Running"
 date = 2017-03-11
-tags = ["website"]
 aliases = ["/finally-up-and-running"]
+
+[taxonomies]
+tags = ["website"]
 
 [extra]
 note = """

@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {% block content %}
-    {% for tag in tags %}
+    {% for tag in terms %}
         <header class="post-header">
             <h1 class="post-header__title"><a href="/tags/{{ tag.slug }}">{{ tag.name }}</a></h1>
             <p class="post-header__info">

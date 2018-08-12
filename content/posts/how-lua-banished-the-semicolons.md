@@ -1,6 +1,8 @@
 +++
 title = "How Lua Banished the Semicolons"
 date = 2018-04-03
+
+[taxonomies]
 tags = ["language design", "ein", "lua"]
 +++
 

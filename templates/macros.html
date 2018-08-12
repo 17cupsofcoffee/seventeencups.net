@@ -13,10 +13,10 @@
                     </time>
                 </a>
             {% endif %}
-            {% if page.tags %}
-                {% for tag in page.tags %}
+            {% if page.taxonomies.tags %}
+                {% for tag in page.taxonomies.tags %}
                     &bull;
-                    <a href="{{ get_url(path="tags") }}{{ tag | slugify }}">{{ tag }}</a>
+                    <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>
                 {% endfor %}
             {% endif %}
         </p>
