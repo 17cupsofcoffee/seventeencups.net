@@ -6,7 +6,6 @@ Features articles/tutorials about programming and music. \
 base_url = "https://www.seventeencups.net"
 compile_sass = true
 highlight_code = true
-generate_tags_pages = true
 generate_rss = true
 
 [[taxonomies]]
