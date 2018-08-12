@@ -7,6 +7,7 @@ base_url = "https://www.seventeencups.net"
 compile_sass = true
 highlight_code = true
 generate_rss = true
+highlight_theme = "charcoal"
 
 [[taxonomies]]
 name = "tags"
