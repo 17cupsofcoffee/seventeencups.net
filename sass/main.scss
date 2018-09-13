@@ -16,6 +16,7 @@ body {
     line-height: $base-line-height;
     margin: 0;
     padding: 0;
+    background-color: $secondary-color;
 }
 
 h1 {
@@ -37,34 +38,31 @@ a {
     text-decoration: none;
 }
 
-.site-header {
-    font-family: $header-font;
-    text-align: center;
+.container {
     margin: 0 auto;
-    padding: 32px;
-    color: #ffffff;
+    max-width: $content-width;
+}
+
+.site-header, .site-footer {
     background-color: $primary-color;
+    color: #ffffff;
+    font-family: $header-font;
 
     a {
         color: #ffffff;
     }
+}
+
+.site-header {
+    text-align: center;
+    padding: 32px 0;
 
     &__logo img {
-        border-radius: 50%;
-        border: 4px solid $secondary-color;
+        vertical-align: bottom;
     }
 
-    &__title {
-        margin: 32px 0 4px;
-    }
-
-    &__bio {
-        margin: 0;
-
-        img {
-            image-rendering: pixelated;
-            border: 1px solid $secondary-color;
-        }
+    &__title, &__bio {
+        margin: 4px 0;
     }
 
     &__pronouns::before, &__pronouns::after {
@@ -75,10 +73,9 @@ a {
         background-image: url("/pride.png")
     }
 
-    &__nav,
-    &__social {
+    &__links ul {
         font-size: 1.25em;
-        margin: 32px 0 0 0;
+        margin: 8px 0;
         list-style: none;
         padding: 0;
 
@@ -88,43 +85,44 @@ a {
         }
     }
 
-    &__social {
-        font-size: 2em;
-    }
-
     @media (min-width: $breakpoint-tablet) {
-        width: $sidebar-width;
-        height: 100%;
-        position: fixed;
+        padding: 0;
+        text-align: start;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
 
         &__logo {
-            margin: 0 auto;
+            margin-right: 16px;
         }
 
-        &__nav li {
-            display: block;
+        &__info, &__links {
+            flex: 1 0 0;
+        }
+
+        &__info {
+            text-align: start;
+        }
+        
+        &__links {
+            text-align: end;
+            margin-right: 16px;
         }
     }
 }
 
 .site-content {
-    padding: 32px;
-    margin: 0 auto;
-    max-width: $content-width;
-
-    @media (min-width: $breakpoint-tablet) {
-        margin: 0;
-        margin-left: $sidebar-width;
-    }
-
-    @media (min-width: $breakpoint-screen) {
-        padding: 64px;
-    }
+    padding: 64px;
+    background-color: #FFFFFF;
 }
 
 .site-footer {
-    margin-top: 32px;
+    padding: 32px 0;
     text-align: center;
+
+    a {
+        font-weight: 600;
+    }
 }
 
 .post-header {
