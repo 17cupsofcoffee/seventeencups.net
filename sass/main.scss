@@ -112,8 +112,12 @@ a {
 }
 
 .site-content {
-    padding: 64px;
+    padding: 32px;
     background-color: #FFFFFF;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding: 64px;
+    }
 }
 
 .site-footer {
