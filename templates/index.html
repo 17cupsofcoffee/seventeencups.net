@@ -58,7 +58,7 @@
                 </p>
             </div>
 
-            <div class="site-header__links">
+            <nav class="site-header__links">
                 <ul class="site-header__nav">
                     <li><a href="{{ get_url(path="/") }}">Home</a></li>
                     <li><a href="{{ get_url(path="projects") }}">Projects</a></li>
@@ -101,27 +101,28 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </header>
 
-    <main class="site-content">
-        {% block content %}
-            <div class="posts">
-                {% set posts = get_section(path="posts/_index.md") %}
-                {% for page in posts.pages %}
-                    {{ macros::post_header(page=page, excerpt=true) }}
-                {% endfor %}
-            </div>
-        {% endblock content %}
-    </main>
+        <main class="site-content">
+            {% block content %}
+                <div class="posts">
+                    {% set posts = get_section(path="posts/_index.md") %}
+                    {% for page in posts.pages %}
+                        {{ macros::post_header(page=page, excerpt=true) }}
+                    {% endfor %}
+                </div>
+            {% endblock content %}
+        </main>
 
-    <footer class="site-footer">
-        © 2017 <a href="{{ get_url(path="/") }}">Joe Clay</a>. Powered by <a href="http://getgutenberg.io/">Gutenberg</a>.
-        <br>
-        This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-        <br>
-        Icons from <a href="http://fontawesome.com">Font Awesome</a>, packaged with <a href="http://icomoon.io/">IcoMoon</a>.
-    </footer>
+        <footer class="site-footer">
+            © 2017 <a href="{{ get_url(path="/") }}">Joe Clay</a>. Powered by <a href="http://getgutenberg.io/">Gutenberg</a>.
+            <br>
+            This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            <br>
+            Icons from <a href="http://fontawesome.com">Font Awesome</a>, packaged with <a href="http://icomoon.io/">IcoMoon</a>.
+        </footer>
+    </div>
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
