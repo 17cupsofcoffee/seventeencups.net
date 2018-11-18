@@ -4,6 +4,11 @@ date = 2017-10-01
 
 [taxonomies]
 tags = ["rust", "website"]
+
+[extra]
+note = """
+Since the writing of this post, Gutenberg has been renamed to [Zola](https://www.getzola.org).
+"""
 +++
 
 In [my first post on this site](./posts/finally-up-and-running.md), I mentioned that I'd tried several static site generators and found them all to be fairly painful to use - hence my choice to use [Ghost](https://ghost.org/). While I still think Ghost is a nice platform, there's a few things that made me rethink that decision recently:

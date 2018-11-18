@@ -8,7 +8,7 @@ tags = ["website"]
 
 [extra]
 note = """
-I've since ditched Ghost and moved to a nice little static site generator called [Gutenberg](http://getgutenberg.io/) - more info on that [here](https://www.seventeencups.net/posts/hello-gutenberg/)!
+I've since ditched Ghost and moved to a nice little static site generator called [Zola](https://www.getzola.org) - more info on that [here](https://www.seventeencups.net/posts/hello-gutenberg/)!
 """
 +++
 
