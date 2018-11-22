@@ -1,2 +1,2 @@
 # SeventeenCups.net
-This is the source code for [my personal website](https://www.seventeencups.net). It uses [Gutenberg](https://github.com/Keats/gutenberg), a pretty cool Rust static site generator. Every time a commit is pushed to this repository, Netlify regenerates the site and publishes it.
+This is the source code for [my personal website](https://www.seventeencups.net). It uses [Zola](https://github.com/getzola/zola), a pretty cool Rust static site generator. Every time a commit is pushed to this repository, Netlify regenerates the site and publishes it.
