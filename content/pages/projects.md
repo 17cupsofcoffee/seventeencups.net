@@ -3,6 +3,11 @@ title = "Projects"
 path = "/projects"
 +++
 
+## Tetra
+<small>[GitHub](https://github.com/17cupsofcoffee/tetra)</small>
+
+A 2D game framework written in Rust, inspired by the likes of XNA, MonoGame and Raylib. 
+
 ## Ein
 <small>[GitHub](https://github.com/17cupsofcoffee/ein)</small>
 
