@@ -1,13 +1,14 @@
 +++
-title = "Hello, Gutenberg!"
+title = "Hello, Zola!"
 date = 2017-10-01
+aliases = ["/posts/hello-gutenberg"]
 
 [taxonomies]
 tags = ["rust", "website"]
 
 [extra]
 note = """
-Since the writing of this post, Gutenberg has been renamed to [Zola](https://www.getzola.org).
+When this post was originally written, Zola was named Gutenberg - it has since been renamed to avoid confusion with the Wordpress editor of the same name.
 """
 +++
 
@@ -20,12 +21,12 @@ So, I went back on the hunt. [Gatsby](gatsbyjs.org/), a React-based site generat
 
 [Hugo](http://gohugo.io), on the other hand, came extremely close to winning me over (and would probably still be my second choice). It has loads of features out of the box, and has incredibly fast build times. Unfortunately, Go templates are fairly nasty to work with, and I had a few issues getting the new syntax highlighting engine working.
 
-Then I came across [Gutenberg](https://github.com/Keats/gutenberg), by [Vincent Prouillet](https://vincent.is/). It has a lot of the nice features that attracted me to Hugo, plus a few big advantages:
+Then I came across [Zola](https://www.getzola.org/), by [Vincent Prouillet](https://vincent.is/). It has a lot of the nice features that attracted me to Hugo, plus a few big advantages:
 
 * It uses the [Tera](https://github.com/Keats/tera) templating language (also written by Mr. Prouillet!), which is quite nice and has a lot in common with Django and Jinja.
 * It has Sass built in, which removes a lot of the need for a frontend build pipeline.
 * It's written in Rust, meaning if I run into any issues with it, I can actually contribute rather than waiting for someone else to fix it!
 
-After spending the weekend moving my site across to Gutenberg, I'm really happy with it - there's a few bugs, and the documentation is a little scattered, but on the whole, it just feels really simple and pleasant to use. The majority of static site generators I've tried, I've felt like I was battling them to get simple stuff done, but Gutenberg kinda just got out of my way and let me get on with it.
+After spending the weekend moving my site across to Zola, I'm really happy with it - there's a few bugs, and the documentation is a little scattered, but on the whole, it just feels really simple and pleasant to use. The majority of static site generators I've tried, I've felt like I was battling them to get simple stuff done, but Zola kinda just got out of my way and let me get on with it.
 
 While I was at it, I gave the site a bit of a spruce up - I think it has a little more personality now! Let me know what you think.
