@@ -16,22 +16,13 @@
             {{ page.content | safe }}
 
             {% if page.date %}
-                <div id="disqus_thread"></div>
-                <script>
-                    var disqus_config = function () {
-                    this.page.url = "{{ page.permalink | safe }}";
-                    this.page.identifier = "{{ page.slug }}";
-                    };
-                    (function() {
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://joe-clay.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                    })();
-                </script>
-                <noscript>
-                    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-                </noscript>
+            <script src="https://utteranc.es/client.js"
+                repo="17cupsofcoffee/seventeencups.net"
+                issue-term="url"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+            </script>
             {% endif %}
         </main>
     </article>

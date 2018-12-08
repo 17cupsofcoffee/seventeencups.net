@@ -170,10 +170,14 @@ a {
         }
     }
 
-    #disqus_thread iframe {
-        padding: 0;
-        background-color: transparent;
-        box-shadow: none;
+    .utterances {
+        max-width: 100%;
+
+        iframe {
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+        }
     }
 }
 
