@@ -20,7 +20,6 @@ They say a code sample is worth a thousand words (or something like that...), so
 ```rust
 extern crate tetra;
 
-use tetra::error::Result;
 use tetra::glm::Vec2;
 use tetra::graphics::{self, Color, DrawParams, Texture};
 use tetra::input::{self, Key};
@@ -63,9 +62,9 @@ impl State for GameState {
     }
 }
 
-fn main() -> Result {
+fn main() -> tetra::Result {
     let ctx = &mut ContextBuilder::new()
-        .title("Rendering a Texture")
+        .title("Keyboard Input")
         .size(160, 144)
         .scale(4)
         .resizable(true)
