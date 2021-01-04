@@ -28,7 +28,7 @@
     <meta name="theme-color" content="#8e44ad">
 
     {% if config.generate_rss %}
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
     {% endif %}
 
     <link rel="stylesheet" href="{{ get_url(path="main.css") }}">
@@ -94,7 +94,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ get_url(path="rss.xml") }}" aria-label="RSS Feed">
+                        <a href="{{ get_url(path="atom.xml") }}" aria-label="RSS Feed">
                             <svg class="icon icon-rss" aria-hidden="true">
                                 <use xlink:href="{{ get_url(path="symbol-defs.svg") }}#icon-rss"></use>
                             </svg>
