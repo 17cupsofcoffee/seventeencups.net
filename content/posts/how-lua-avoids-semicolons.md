@@ -1,6 +1,7 @@
 +++
-title = "How Lua Banished the Semicolons"
+title = "How Lua Avoids Semicolons"
 date = 2018-04-03
+aliases = ["/posts/how-lua-banished-the-semicolons"]
 
 [taxonomies]
 tags = ["language design", "ein", "lua"]
@@ -21,19 +22,17 @@ let x = 1 // Does the statement end here?
 - 1       // Or does it end here?
 ```
 
-How does our language's parser decide whether this should be `let x = 1; -1;` or `let x = 1 - 1;`? In the parser's eyes, they're both perfectly valid statements!
+How does our language's parser decide whether this should be one statement (`let x = 1 - 1`) or two (`let x = 1` followed by `-1`)? In the parser's eyes, they're both perfectly valid!
 
 ## The (Potential) Solutions
 
-There's several ways that languages try to get around this problem.  Some make the whitespace in their language significant, like Python. Others, like Go, helpfully insert the semicolons for you behind the scenes based on [a set of rules](https://golang.org/ref/spec#Semicolons).
+There's several ways that languages try to get around this problem.  Some make the whitespace in their language significant, like Python. Others, like Go, try to insert the semicolons for you behind the scenes based on [a set of rules](https://golang.org/ref/spec#Semicolons).
 
 Personally though, I'm not a fan of those solutions. Making whitespace have meaning rubs me the wrong way for reasons I don't quite understand, and automatic semicolon insertion feels like placing too much trust in the compiler to 'guess' where I meant for the statements to end.
 
-Surely there's a way we can make things explicit without peppering our code with extra syntax?
-
 ## How Lua Does It
 
-Turns out we can! Lua's syntax is unambigous, even if you leave out all the semicolons and nice formatting, and the main way it achieves this is by dropping a feature a lot of us take for granted - *expressions-as-statements*.
+Lua's syntax is unambigous, even if you leave out all the semicolons and nice formatting, and the main way it achieves this is by dropping a feature a lot of us take for granted - *expressions-as-statements*.
 
 In most languages, it's perfectly valid to use an expression (a piece of code that can be evaluated to get a value, like adding two numbers together) in the same place that you would use a statement (a piece of code run for its side effects, like a variable declaration).
 
@@ -64,19 +63,13 @@ isActive && doSomething();
 The equivalent in Lua isn't valid unless you [assign the result to a temporary variable:](http://lua-users.org/wiki/ExpressionsAsStatements)
 
 ```lua
-local _ = isActive and doSomething() -- _ has no special meaning - just a common Lua 
-                                     -- naming convention for throwing away variables!
+local _ = isActive and doSomething()
+-- _ has no special meaning - just a common Lua 
+-- naming convention for throwing away variables!
 ```
-
-That said, once I started thinking about it, I realized I don't write code like that all too often! I've gone through my phase of writing [ternary](https://en.wikipedia.org/wiki/%3F:) soup, and I think I tend to prefer using more explicit/blocky syntax these days - it tends to convey my intent better. I'm starting to wonder if dropping expressions-as-statements might not be too bad a price to pay for having a completely unambiguous, semicolon-less grammar!
 
 ## Conclusion
 
 Thank you for reading! I hope I didn't bore you to death rambling on about semicolons for $x words! ❤️
 
 If you're interested in this kind of thing, I'd recommend taking a look at the [full grammar for Lua](http://www.lua.org/manual/5.3/manual.html#9) from its reference manual - it's really short and really clean, and there's a lot of really interesting design decisions in there which I'm interested in digging deeper into.
-
-Now, my questions to you, dear reader:
-
-* Do any other popular-ish languauges disallow expressions-as-statements?
-* How do you feel about this solution compared to the others I mentioned? Do you think the trade-offs are worth it?
