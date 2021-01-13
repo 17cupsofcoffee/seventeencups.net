@@ -8,17 +8,31 @@ tags = ["rust", "language design"]
 
 One of my favourite features of Rust is that it has excellent support for pattern matching. This is usually done through `match` expressions, but there is also a shorter syntax that can be used if you only need a single branch, which is called `if let`.
 
-If you're unfamiliar, an `if let` expression looks like this:
+If you're unfamiliar, a `match` expression looks like this:
 
 ```rust
 let x = Some(123);
 
-if let Some(y) = x {
+match x {
+    Some(y) => {           // This matches if `x` is `Some`.
+        println!("{}", y); // This prints '123'.
+    }
+
+    _ => {}                // This matches all other values.
+}
+```
+
+And the equivalent `if let` expression looks like this:
+
+```rust
+let x = Some(123);
+
+if let Some(y) = x {   // This matches if `x` is `Some`.
     println!("{}", y); // This prints '123'.
 }
 ```
 
-This syntax, useful as it is, can be quite confusing to new Rust developers. I commonly see people asking things like:
+This shortcut syntax, useful as it is, can be quite confusing to new Rust developers. I commonly see people asking things like:
 
 * Why is that `if` statement 'backwards'?
 * Why is there a `let` in that conditional?
