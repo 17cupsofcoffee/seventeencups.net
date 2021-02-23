@@ -186,6 +186,17 @@ a {
     }
 }
 
+.skip-link {
+    position: absolute;
+    top: -9999px;
+    display: inline-block;
+    background: #ffffff;
+}
+
+.skip-link:active, .skip-link:focus, .skip-link:hover {
+    top: 0;
+}
+
 .icon {
     display: inline-block;
     width: 1em;

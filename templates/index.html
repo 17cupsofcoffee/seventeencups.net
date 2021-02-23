@@ -37,6 +37,8 @@
     {% endblock extra_head %}
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <div class="container">
         <header class="site-header">
             <div class="site-header__logo">
@@ -97,7 +99,7 @@
             </nav>
         </header>
 
-        <main class="site-content">
+        <main id="main-content" class="site-content">
             {% block content %}
                 <div class="posts">
                     {% set posts = get_section(path="posts/_index.md") %}
