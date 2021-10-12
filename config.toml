@@ -7,8 +7,11 @@ base_url = "https://www.seventeencups.net"
 compile_sass = true
 highlight_code = true
 generate_feed = true
-highlight_theme = "charcoal"
 
 [[taxonomies]]
 name = "tags"
 feed = true
+
+[markdown]
+highlight_code = true
+highlight_theme = "charcoal"
