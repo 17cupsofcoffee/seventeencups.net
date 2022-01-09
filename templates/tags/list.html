@@ -1,12 +1,12 @@
 {% extends "index.html" %}
 
 {% block content %}
-    {% for tag in terms %}
-        <header class="post-header">
-            <h1 class="post-header__title"><a href="/tags/{{ tag.slug }}">{{ tag.name }}</a></h1>
-            <p class="post-header__info">
-                {{ tag.pages | length }} post{{ tag.pages | length | pluralize }}
-            </p>
-        </header>
-    {% endfor %}
+    <h1 class="page-heading">Tags</h1>
+    <ul>
+        {% for tag in terms | sort(attribute="pages") | reverse %}
+            <li>
+                <a href="/tags/{{ tag.slug }}">{{ tag.name }}</a> ({{ tag.pages | length }} post{{ tag.pages | length | pluralize }})
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock content %}

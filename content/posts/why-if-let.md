@@ -1,5 +1,6 @@
 +++
 title = "Why Did Rust Pick the 'If Let' Syntax?"
+description = "Rust has a slightly idiosyncratic syntax for matching on single patterns, but there's a good reason for it!"
 date = 2021-01-12
 
 [taxonomies]

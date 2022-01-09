@@ -1,0 +1,42 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: $line-height-base;
+    font-size: $font-size-base;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: $secondary-color;
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+:not(pre) > code {
+    background-color: $accent-color;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: $font-size-small;
+    line-height: 1;
+}

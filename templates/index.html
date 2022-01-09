@@ -9,7 +9,7 @@
 
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.title }}</title>
     
-    <meta name="description" content="{% if page.content %}{{ page.content | safe | striptags | truncate }}{% else %}{{ config.description }}{% endif %}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ config.description }}{% endif %}">
     <meta name="author" content="Joe Clay">
 
     <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ config.title }}">
@@ -32,85 +32,54 @@
     {% endif %}
 
     <link rel="stylesheet" href="{{ get_url(path="main.css") }}">
-
-    {% block extra_head %}
-    {% endblock extra_head %}
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
 
     <div class="container">
-        <header class="site-header">
-            <div class="site-header__logo">
-                <a href="{{ get_url(path="/") }}">
-                    <img src="{{ get_url(path="favicon-128x128.png") }}" alt="Joe Clay" width="128" height="128">
-                </a>
-            </div>
+        <nav class="site-nav primary">
+            <h1 class="site-nav__title">
+                <a href="/">Joe Clay</a>
+            </h1>
+            <ul class="site-nav__links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/tags">Tags</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
 
-            <div class="site-header__info">
-                <a href="{{ get_url(path="/") }}">
-                    <h1 class="site-header__title">{{ config.title }}</h1>
-                </a>
-
-                <p class="site-header__bio">
-                    dev, musician, coffee disposal unit<br>
-                    <a href="https://pronoun.is/they/them" class="site-header__pronouns">
-                        they/them
-                    </a>
-                </p>
-            </div>
-
-            <nav class="site-header__links">
-                <ul class="site-header__nav">
-                    <li><a href="{{ get_url(path="/") }}">Home</a></li>
-                    <li><a href="{{ get_url(path="projects") }}">Projects</a></li>
-                    <li><a href="{{ get_url(path="tags") }}">Tags</a></li>
-                </ul>
-                <ul class="site-header__social">
-                    <li>
-                        <a href="https://twitter.com/17cupsofcoffee" aria-label="Twitter">
-                            <svg class="icon icon-twitter" aria-hidden="true">
-                                <use xlink:href="{{ get_url(path="symbol-defs.svg") }}#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/17cupsofcoffee" aria-label="GitHub">
-                            <svg class="icon icon-github" aria-hidden="true">
-                                <use xlink:href="{{ get_url(path="symbol-defs.svg") }}#icon-github"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:joe@seventeencups.net" aria-label="Email">
-                            <svg class="icon icon-mail" aria-hidden="true">
-                                <use xlink:href="{{ get_url(path="symbol-defs.svg") }}#icon-mail"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ get_url(path="atom.xml") }}" aria-label="RSS Feed">
-                            <svg class="icon icon-rss" aria-hidden="true">
-                                <use xlink:href="{{ get_url(path="symbol-defs.svg") }}#icon-rss"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <main id="main-content" class="site-content">
-            {% block content %}
-                <div class="posts">
-                    {% set posts = get_section(path="posts/_index.md") %}
-                    {% for page in posts.pages %}
-                        {{ macros::post_header(page=page, excerpt=true) }}
-                    {% endfor %}
+        {% if current_path and current_path == "/" %}
+            <header class="site-intro primary">
+                <div class="site-intro__image">
+                    <img src="/favicon-256x256.png" alt="A picture of Joe Clay">
                 </div>
-            {% endblock content %}
-        </main>
+                <div class="site-intro__info content">
+                    <p>
+                        <span class="site-intro__greeting">Hi, I'm Joe</span> (they/them)!
+                    </p>
 
-        <footer class="site-footer">
+                    <p>
+                        I'm a software engineer, musician and hobbyist gamedev from the UK.
+                    </p>
+
+                    <p>
+                        You can find me around the web in various places:
+                    </p>
+
+                    {{ macros::socials() }}
+                </div>
+            </header>
+        {% endif %}
+
+        <div class="site-content" id="main-content">
+            {% block content %}
+                {% set posts = get_section(path="posts/_index.md") %}
+                {{ macros::post_list(posts=posts.pages) }}
+            {% endblock content %}
+        </div>
+
+        <footer class="site-footer primary">
             © 2017-{{ now() | date(format="%Y") }} <a href="{{ get_url(path="/") }}">Joe Clay</a>. Powered by <a href="https://www.getzola.org/">Zola</a>.
             <br>
             This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.

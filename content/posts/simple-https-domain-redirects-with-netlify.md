@@ -1,5 +1,6 @@
 +++
 title = "Simple HTTPS Domain Redirects with Netlify"
+description = "Tips on using (or abusing?) the Netlify _redirects file for free HTTPS domain redirection."
 date = 2020-06-19
 
 [taxonomies]

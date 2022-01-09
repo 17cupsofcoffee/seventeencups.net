@@ -1,21 +1,39 @@
 {% extends "index.html" %}
-{% import "macros.html" as macros %}
 
 {% block content %}
-    <article class="post-body">
-        {{ macros::post_header(page=page) }}
+    <article class="post">
+        <h1 class="post__title">
+            {{ page.title }}
+        </h1>
 
-        <main>
-            {% if page.extra.note %}
-                <aside class="post-body__note">
-                    <h3 class="post-body__note__title">Hey, listen!</h3>
-                    <p class="post-body__note__text">{{ page.extra.note | markdown(inline=true) | safe }}</p>
-                </aside>
-            {% endif %}
+        {% if page.date %}
+            <p class="post__info">
+                <time datetime="{{ page.date }}">
+                    {{ page.date | date(format="%B %e, %Y") }}
+                </time>
+                
+                {% if page.taxonomies.tags %}
+                    &mdash;
 
+                    {% for tag in page.taxonomies.tags %}
+                        <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                {% endif %}
+            </p>
+        {% endif %}
+
+        {% if page.extra.note %}
+            <aside class="post__note">
+                <h3 class="post__note-title">Hey, listen!</h3>
+                <p class="post__note-text">{{ page.extra.note | markdown(inline=true) | safe }}</p>
+            </aside>
+        {% endif %}
+
+        <main class="content">
             {{ page.content | safe }}
+        </main>
 
-            {% if page.date %}
+        {% if page.date %}
             <script src="https://utteranc.es/client.js"
                 repo="17cupsofcoffee/seventeencups.net"
                 issue-term="url"
@@ -23,7 +41,6 @@
                 crossorigin="anonymous"
                 async>
             </script>
-            {% endif %}
-        </main>
+        {% endif %}
     </article>
 {% endblock content %}

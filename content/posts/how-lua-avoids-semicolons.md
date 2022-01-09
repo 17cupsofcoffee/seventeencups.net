@@ -1,5 +1,6 @@
 +++
 title = "How Lua Avoids Semicolons"
+description = "Why is it that some languages require semicolons and some don't? This article attempts to explain, as well as demonstrating an interesting trick in the Lua grammar."
 date = 2018-04-03
 aliases = ["/posts/how-lua-banished-the-semicolons"]
 

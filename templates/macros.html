@@ -1,30 +1,39 @@
-{% macro post_header(page, excerpt=false) %}
-    <header class="post-header">
-        <h1 class="post-header__title">
-            <a href="{{ page.permalink }}">
-                {{ page.title }}
-            </a>
-        </h1>
-        <p class="post-header__info">
-            {% if page.date %}
-                <a class="post-header__timestamp" href="{{ page.permalink }}">
-                    <time datetime="{{ page.date }}">
+{% macro post_list(posts) %}
+    <div class="post-list">
+        {% for page in posts %}
+            <article class="post-summary">
+                <h3 class="post-summary__title">
+                    <a href="{{ page.permalink }}">
+                        {{ page.title }}
+                    </a>
+                </h3>
+                <p class="post-summary__info">
+                    <time class="post-summary__date" datetime="{{ page.date }}">
                         {{ page.date | date(format="%B %e, %Y") }}
                     </time>
-                </a>
-            {% endif %}
-            {% if page.taxonomies.tags %}
-                {% for tag in page.taxonomies.tags %}
-                    &bull;
-                    <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>
-                {% endfor %}
-            {% endif %}
-        </p>
-        {% if excerpt %}
-            <p class="post-header__excerpt">
-                {{ page.content | safe | striptags | truncate }}
-                <a href="{{ page.permalink }}">more</a>
-            </p>
-        {% endif %}
-    </header>
-{% endmacro post_header %}
+
+                    &mdash;
+
+                    {% if page.taxonomies.tags %}
+                        {% for tag in page.taxonomies.tags %}
+                            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </p>
+                <p class="post-summary__description">
+                    {{ page.description }}
+                </p>
+            </article>
+        {% endfor %}
+    </div>
+{% endmacro post_list %}
+
+{% macro socials() %}
+    <ul class="socials">
+        {% for social in config.extra.socials %}
+        <li>
+            <a href="{{ social.url }}"><span class="icon icon-{{ social.icon }}" aria-hidden="true"></span>{{ social.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endmacro socials %}

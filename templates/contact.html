@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% import "macros.html" as macros %}
+
+{% block content %}
+    <div class="content">
+        <h1>{{ page.title }}</h1>
+        <p>
+            If you want to get in touch, the easiest way is to message me on social media:
+        </p>
+        
+        {{ macros::socials() }}
+
+        <p>
+            You can also email me via <code>joe (AT) seventeencups (DOT) net</code>.
+        </p>
+    </div>
+{% endblock content %}

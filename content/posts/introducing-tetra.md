@@ -1,5 +1,6 @@
 +++
 title = "Introducing Tetra"
+description = "An introduction to Tetra, a 2D game framework written in Rust."
 date = 2018-12-02
 
 [taxonomies]

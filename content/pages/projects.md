@@ -1,24 +1,42 @@
 +++
 title = "Projects"
+description = "A list of Joe Clay's various projects, with links."
 path = "/projects"
+template = "projects.html"
+
+[[extra.projects]]
+name = "Tetra"
+type = "code"
+url = "https://github.com/17cupsofcoffee/tetra"
+description = """
+A 2D game framework written in Rust, inspired by the likes of XNA, MonoGame and Raylib.
+"""
+
+[[extra.projects]]
+name = "Ein"
+type = "code"
+url = "https://github.com/17cupsofcoffee/ein"
+description = """
+A toy programming language, inspired by Rust, Ruby and Wren.
+
+I built it as I followed along with the excellent '[Crafting Interpeters](http://craftinginterpreters.com/)' book.
+"""
+
+[[extra.projects]]
+name = "Still Hungry"
+type = "code"
+url = "https://stillhungry.seventeencups.net"
+description = """
+A Minecraft mod that adds new foods and cooking mechanics. Features art by [DizzyAlyx](https://dizzyalyx.deviantart.com).
+
+Currently unmaintained, but kept online for posterity (it was the first programming project I ever released)!
+"""
+
+[[extra.projects]]
+name = "Game Music Covers"
+type ="music"
+url = "https://www.youtube.com/playlist?list=PLbi0QO1oQ88s-ek9uLbrMyabGB60mM8Z7"
+description = """
+To keep myself occupied during the COVID-19 lockdowns, I started working on a set of covers of video game soundtracks. They're some of the most complex pieces of music I've ever worked on, and I'm really happy with the end results!
+"""
 +++
-
-## Tetra
-<small>[GitHub](https://github.com/17cupsofcoffee/tetra)</small>
-
-A 2D game framework written in Rust, inspired by the likes of XNA, MonoGame and Raylib. 
-
-## Ein
-<small>[GitHub](https://github.com/17cupsofcoffee/ein)</small>
-
-A little dynamically-typed programming language, inspired by Rust, Ruby and Wren (among others). I'm writing this as I work my way through [Crafting Interpeters](http://craftinginterpreters.com/) - hopefully it'll become a Real Language™ eventually!
-
-## Still Hungry
-<small>[Website](https://stillhungry.seventeencups.net/) | [GitHub](https://github.com/17cupsofcoffee/Still-Hungry)</small>
-
-A Minecraft mod that adds new foods and cooking mechanics. Features art by [DizzyAlyx](https://dizzyalyx.deviantart.com). Currently unmaintained, but kept online for posterity (it was the first programming project I ever released)!  
-
-## Music
-Various pieces of music I've worked on can be found on my [SoundCloud](https://soundcloud.com/17cupsofcoffee).
-
-<p><iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/4832203&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe></p>

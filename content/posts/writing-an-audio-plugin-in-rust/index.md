@@ -1,5 +1,6 @@
 +++
 title = "Writing an Audio Plugin in Rust"
+description = "A short guide on how to write a VST2 plugin in Rust."
 date = 2017-03-25
 aliases = ["/writing-an-audio-plugin-in-rust"]
 

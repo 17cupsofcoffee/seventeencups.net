@@ -1,5 +1,6 @@
 +++
 title = "Building a MUD with F# and Akka.NET - Part One"
+description = "A tutorial on using Akka.NET to build a simple echo server, as the foundation for a MUD."
 date = 2017-03-12
 aliases = ["/building-a-mud-with-f-sharp-and-akka-net-part-one"]
 

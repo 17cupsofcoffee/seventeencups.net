@@ -1,7 +1,7 @@
 {% extends "index.html" %}
+{% import "macros.html" as macros %}
 
 {% block content %}
-    {% for page in term.pages %}
-        {{ macros::post_header(page=page, excerpt=true) }}
-    {% endfor %}
+    <h1 class="page-heading">Posts tagged with '{{ term.name }}'</h1>
+    {{ macros::post_list(posts=term.pages) }}
 {% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% import "macros.html" as macros %}
+
+{% block content %}
+    <h1 class="page-heading">{{ page.title }}</h1>
+    <div class="projects">
+        {% for project in page.extra.projects %}
+        <section class="project">
+            <a href="{{ project.url }}" class="project__heading primary">
+                <h2 class="project__title">{{ project.name }}</h2>
+                <p class="project__type">{{ project.type }}</p>
+            </a>
+            <div class="project__info content">
+                {{ project.description | markdown | safe }}
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+{% endblock content %}
