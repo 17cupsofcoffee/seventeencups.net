@@ -19,7 +19,7 @@ If you're following along at home, make sure you have the [Akka](https://www.nug
 
 <small>[<i class="fa fa-github" aria-hidden="true"></i> View the code for this section](https://github.com/17cupsofcoffee/AkkaMUD/blob/part1a-the-basics/AkkaMUD/Program.fs)</small>
 
-To begin with, let's take a quick look at how to use the Akka.NET F# API by creating a simple actor - all it'll do is say hello or goodbye when it receives a message. If you're already familiar with how to do this, feel free to [skip ahead to the next section](#networkio)!
+To begin with, let's take a quick look at how to use the Akka.NET F# API by creating a simple actor - all it'll do is say hello or goodbye when it receives a message. If you're already familiar with how to do this, feel free to [skip ahead to the next section](#network-i-o)!
 
 First, we need to create a 'system' - I'm not going to go into too much detail on the actual concepts behind the Akka actor model here ([the docs](http://getakka.net/docs/)  explain it much better than I probably would), but at the most simple level, the system is the structure which co-ordinates all of your actors, managing the thread pool that allows them to do their work.
 

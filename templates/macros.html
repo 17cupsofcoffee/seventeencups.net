@@ -2,11 +2,11 @@
     <div class="post-list">
         {% for page in posts %}
             <article class="post-summary">
-                <h3 class="post-summary__title">
+                <h2 class="post-summary__title">
                     <a href="{{ page.permalink }}">
                         {{ page.title }}
                     </a>
-                </h3>
+                </h2>
                 <p class="post-summary__info">
                     <time class="post-summary__date" datetime="{{ page.date }}">
                         {{ page.date | date(format="%B %e, %Y") }}
@@ -28,8 +28,8 @@
     </div>
 {% endmacro post_list %}
 
-{% macro socials() %}
-    <ul class="socials">
+{% macro socials(invert=false) %}
+    <ul class="socials{% if invert %} invert{% endif %}">
         {% for social in config.extra.socials %}
         <li>
             <a href="{{ social.url }}"><span class="icon icon-{{ social.icon }}" aria-hidden="true"></span>{{ social.name }}</a>
