@@ -21,7 +21,7 @@ socials = [
     { name = "Twitter", url = "https://twitter.com/17cupsofcoffee", icon = "twitter" },
     { name = "GitHub", url = "https://github.com/17cupsofcoffee", icon = "github" },
     { name = "Itch.io", url = "https://17cupsofcoffee.itch.io/", icon = "itch-io" },
-    { name = "YouTube", url = "https://www.youtube.com/channel/UCjOhJt9bnGJDOZ5NEtsxhCA", icon = "youtube" },
+    { name = "YouTube", url = "https://youtube.com/@17cupsofcoffee", icon = "youtube" },
     { name = "SoundCloud", url = "https://soundcloud.com/17cupsofcoffee", icon = "soundcloud" },
     { name = "Twitch", url = "https://www.twitch.tv/17cupsofcoffee", icon = "twitch" },
 ]
