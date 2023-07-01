@@ -32,7 +32,7 @@
     <ul class="socials{% if invert %} invert{% endif %}">
         {% for social in config.extra.socials %}
         <li>
-            <a href="{{ social.url }}"><span class="icon icon-{{ social.icon }}" aria-hidden="true"></span>{{ social.name }}</a>
+            <a href="{{ social.url }}">{{ social.name }}</a>
         </li>
         {% endfor %}
     </ul>

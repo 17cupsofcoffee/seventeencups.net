@@ -2,7 +2,6 @@
 
 @import "variables";
 @import "reset";
-@import "icons";
   
 .container {
     max-width: $site-width;
@@ -86,8 +85,8 @@
 }
 
 .socials {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
+    display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     list-style: none;
     padding-left: 0;
@@ -100,9 +99,11 @@
     a {
         display: block;
         text-align: center;
-        border: 1px solid #fff;
         border-radius: $roundness;
-        padding: 8px 0;
+        padding: 4px 8px;
+        background-color: $background-color;
+        color: $primary-color;
+        font-weight: bold;
     }
 
     &.invert a {
@@ -110,7 +111,13 @@
     }
 
     @media (max-width: $site-width) {
-        grid-template-columns: 100%;
+        li {
+            width: 100%;
+        }
+
+        a {
+            padding: 8px;
+        }
     }
 }
 
