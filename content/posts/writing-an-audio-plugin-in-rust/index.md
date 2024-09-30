@@ -96,11 +96,9 @@ Believe it or not, that's all that's required to create our bare minimum VST! Ru
 
 ## Audio Mangling
 
-<div class="post-body__note">
-    <p class="post-body__note__text">
-        Before we start writing our actual audio processing code, a quick warning - make sure that you turn down your volume, and place a limiter on your host's audio output when developing VSTs! Your ears will thank you the first time you run into a bug.
-    </p>
-</div>
+<p class="post__note">
+    Before we start writing our actual audio processing code, a quick warning - make sure that you turn down your volume, and place a limiter on your host's audio output when developing VSTs! Your ears will thank you the first time you run into a bug.
+</p>
 
 Our digital distortion plugin is going to have:
 

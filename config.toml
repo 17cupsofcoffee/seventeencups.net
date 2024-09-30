@@ -18,9 +18,8 @@ highlight_theme = "charcoal"
 
 [extra]
 socials = [
-    { name = "Twitter (for now)", url = "https://twitter.com/17cupsofcoffee" },
+    { name = "Twitter", url = "https://twitter.com/17cupsofcoffee" },
     { name = "Mastodon", url = "https://toot.cafe/@17cupsofcoffee" },
-    { name = "Cohost", url = "https://cohost.org/17cupsofcoffee" },
     { name = "GitHub", url = "https://github.com/17cupsofcoffee"  },
     { name = "Itch.io", url = "https://17cupsofcoffee.itch.io/" },
     { name = "YouTube", url = "https://youtube.com/@17cupsofcoffee" },
