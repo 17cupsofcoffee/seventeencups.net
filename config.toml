@@ -5,8 +5,7 @@ Features articles/tutorials about programming and music. \
 """
 base_url = "https://www.seventeencups.net"
 compile_sass = true
-highlight_code = true
-generate_feed = true
+generate_feeds = true
 
 [[taxonomies]]
 name = "tags"
@@ -20,6 +19,7 @@ highlight_theme = "charcoal"
 socials = [
     { name = "Twitter", url = "https://twitter.com/17cupsofcoffee" },
     { name = "Mastodon", url = "https://toot.cafe/@17cupsofcoffee" },
+    { name = "Bluesky", url = "https://bsky.app/profile/17cupsofcoffee.bsky.social" },
     { name = "GitHub", url = "https://github.com/17cupsofcoffee"  },
     { name = "Itch.io", url = "https://17cupsofcoffee.itch.io/" },
     { name = "YouTube", url = "https://youtube.com/@17cupsofcoffee" },
