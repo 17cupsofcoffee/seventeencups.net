@@ -19,7 +19,6 @@ highlight_theme = "charcoal"
 socials = [
     { name = "Bluesky", url = "https://bsky.app/profile/17cupsofcoffee.bsky.social" },
     { name = "Mastodon", url = "https://toot.cafe/@17cupsofcoffee" },
-    { name = "Twitter", url = "https://twitter.com/17cupsofcoffee" },
     { name = "GitHub", url = "https://github.com/17cupsofcoffee"  },
     { name = "Itch.io", url = "https://17cupsofcoffee.itch.io/" },
     { name = "YouTube", url = "https://youtube.com/@17cupsofcoffee" },
