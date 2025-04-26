@@ -11,7 +11,7 @@
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.title }}</title>
     
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ config.description }}{% endif %}">
-    <meta name="author" content="Joe Clay">
+    <meta name="author" content="{{ config.author }}">
 
     <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ config.title }}">
     <meta property="og:site_name" content="{{ config.title }}">
