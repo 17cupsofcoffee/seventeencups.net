@@ -188,6 +188,10 @@
     h1, h2, h3, h4, h5, h6 {
         line-height: $line-height-heading;
         margin-bottom: 16px;
+
+        &:not(:first-child) {
+            margin-top: 32px;
+        }
     }
     
     h1 {
