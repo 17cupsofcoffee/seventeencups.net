@@ -34,22 +34,28 @@
 }
 
 .site-nav {
+    background-color: $primary-color-dark;
     display: flex;
     align-items: center;
     position: sticky;
     top: 0;
-    padding: 8px 16px;
+    
     z-index: 1;
 
+    a {
+        color: $background-color;
+    }
+
     &__title {
-        flex: 1;
-        font-size: $font-size-normal;
+        background-color: $primary-color;
+        padding: 8px 16px;
     }
 
     &__links {
+        flex: 1;
         display: flex;
         list-style: none;
-        padding: 0;
+        padding: 8px 16px;
         gap: 16px;
     }
 }
@@ -69,13 +75,13 @@
         box-shadow: $shadow;
     }
 
-    &__greeting {
-        font-weight: bold;
-    }
-
     @media (max-width: $site-width) {
         flex-direction: column;
         align-items: center;
+
+        &__title {
+            text-align: center;
+        }
 
         &__info {
             max-width: 512px;
@@ -214,42 +220,7 @@
     margin-top: 32px;
 }
 
-.projects {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.project {
-    background-color: $accent-color;
-    // box-shadow: $shadow;
-
-    &__heading {
-        display: flex;
-        align-items: center;
-        padding: 8px 16px;
-    }
-
-    &__title {
-        flex: 1;
-        font-size: $font-size-normal;
-    }
-
-    &__type {
-        font-style: italic;
-    }
-
-    &__info {
-        padding: 16px;
-        font-size: $font-size-small;
-    }
-}
-
 .site-footer {
     padding: 8px 16px;
     font-size: $font-size-small;
-
-    a {
-        font-weight: bold;
-    }
 }
