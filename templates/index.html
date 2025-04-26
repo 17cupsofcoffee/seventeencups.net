@@ -28,7 +28,7 @@
     <link rel="manifest" href="{{ get_url(path="manifest.json") }}">
     <meta name="theme-color" content="#8e44ad">
 
-    {% if config.generate_rss %}
+    {% if config.generate_feeds %}
         <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
     {% endif %}
 
